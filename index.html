@@ -39,13 +39,14 @@
 				z-index:1;
 			}
 			.background_gradient {
-				background: #2B2B2B;
-				background: -webkit-linear-gradient(170deg, #020E21, #131414);
-				   background: -moz-linear-gradient(170deg, #020E21, #131414);
-					 background: -o-linear-gradient(170deg, #020E21, #131414);
-						background: linear-gradient(170deg, #020E21, #131414);
+				background: #2B2B2B; /* Fallback color */
+				background: -webkit-linear-gradient(170deg, #FFA500, #008000 40%, #0000FF 60%);
+				background: -moz-linear-gradient(170deg, #FFA500, #008000 40%, #0000FF 60%);
+				background: -o-linear-gradient(170deg, #FFA500, #008000 40%, #0000FF 60%);
+				background: linear-gradient(170deg, #FFA500, #008000 40%, #0000FF 60%); /* Standard syntax */
 				background-attachment: fixed;
 			}
+
 			.background_image {
 				-webkit-background-size: cover;
 					 -o-background-size: cover;
@@ -67,8 +68,10 @@
 				right: 0;
 				bottom: 0;
 				left: 0;
-				z-index:10;
+				z-index: 10;
 				overflow: auto;
+				display: flex;
+				flex-direction: column;
 			}
 			.overlay_dark {
 				background-color: transparent;
@@ -116,12 +119,23 @@
 				color: #D8D8D8;
 				text-align: center;
 			}
+			.impressum {
+				color: white;
+				text-align: center;
+				font-family: Tahoma, Verdana, Arial, sans-serif;
+				font-size: 11px;
+				margin-top: auto;
+				margin-bottom: 20px;				
+			}
+
+
 			.project__text_middle {
-				margin-top: 10%;
+				margin-top: auto;
+				margin-top: 5%;
 			}
 			
 			.project__name_middle {
-				margin-top: 10%;
+				margin-top: 5%;
 			}
 			.project__name_fit {
 				max-width: 100%;
@@ -175,12 +189,19 @@
 		
 		<div class="background background_gradient"></div>
 		<div class="overlay">
-		    <main class="project">
-			<i id="fit" class="project_text project__text_middle"> A </i>
-			<h1 id="fit" class="project__name project__name_middle">Blank Room</h1>
-			<i id="fit" class="project_text project__text_middle"> for creative ideas. </i>
-		    </main>
+			<main class="project">
+				<h1 id="fit" class="project__name project__name_middle">CoSy Festival</h1>
+				<p id="fit" class="project_text project__text_middle">09.08 - 11.08.2024</p>
+				<p id="fit" class="project_text project__text_middle">info@cosy-festival.de</p>
+			</main>
+			<footer class="impressum">
+				<p><b>Impressum</b></p>
+				<p>Love Foundation e.V.</p>
+				<p>Tellstraße 10</p>
+				<p>12045 Berlin</p>
+			</footer>
 		</div>
+		
 
 		<script>
 			!function(){var n=function(n,t,e){n.addEventListener?n.addEventListener(t,e,!1):n.attachEvent("on"+t,e)},t=function(n,t){for(key in t)t.hasOwnProperty(key)&&(n[key]=t[key]);return n};window.fitText=function(e,i,o){if(e.length){var a=t({minFontSize:-1/0,maxFontSize:1/0},o),r=function(t){var e=i||1,o=function(){t.style.fontSize=Math.max(Math.min(t.clientWidth/(10*e),parseFloat(a.maxFontSize)),parseFloat(a.minFontSize))+"px"};o(),n(window,"resize",o)};if(e.length)for(var f=0;f<e.length;f++)r(e[f]);else r(e);return e}}}(),function(){window.fitText(document.getElementsByClassName("project__name_fit"),1)}();
