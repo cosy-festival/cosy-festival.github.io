@@ -1,0 +1,4 @@
+Sitemap: https://cosy-festival.de/sitemap.xml
+
+User-agent: *
+Allow: /
