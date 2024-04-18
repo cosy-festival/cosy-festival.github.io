@@ -659,6 +659,16 @@ video {
   margin-right: auto;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -697,6 +707,10 @@ video {
 
 .mt-3 {
   margin-top: 0.75rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .mt-auto {
@@ -801,6 +815,10 @@ video {
 
 .resize {
   resize: both;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .appearance-auto {
@@ -1080,8 +1098,16 @@ video {
   padding: 2.5rem;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
 .p-4 {
   padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-1 {
@@ -1107,6 +1133,11 @@ video {
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .py-6 {
@@ -1148,6 +1179,11 @@ video {
   line-height: 2.5rem;
 }
 
+.text-4xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .text-5xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -1160,6 +1196,11 @@ video {
 
 .text-base {
   font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-lg {
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
@@ -1375,6 +1416,9 @@ video {
 html {
   /* body won't work ¯\_(ツ)_/¯ */
   scroll-snap-type: y proximity;
+  -o-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 main {
@@ -1448,6 +1492,12 @@ article {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.w-section {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (hover: hover) and (pointer: fine) {
