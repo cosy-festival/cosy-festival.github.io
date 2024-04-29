@@ -1428,6 +1428,13 @@ video {
   letter-spacing: 0.1em;
 }
 
+.anchor {
+  display: block;
+  position: relative;
+  top: -96px;
+  visibility: hidden;
+}
+
 html {
   /* body won't work ¯\_(ツ)_/¯ */
   scroll-snap-type: y proximity;
